@@ -7,75 +7,52 @@
   <link rel="stylesheet" href="style.css">
   <style>
     .popup-overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,.6);
-      z-index: 999;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      backdrop-filter: blur(4px);
-      animation: fadeIn .2s ease;
+      position: fixed; inset: 0; background: rgba(0,0,0,.6); z-index: 999;
+      display: flex; align-items: center; justify-content: center;
+      backdrop-filter: blur(4px); animation: fadeIn .2s ease;
     }
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     .popup-box {
-      background: #1a1a20;
-      border: 1px solid #2a2a35;
-      border-top: 3px solid #f5c518;
-      border-radius: 14px;
-      padding: 32px 36px;
-      max-width: 460px;
-      width: 90%;
-      position: relative;
-      animation: slideUp .25s ease;
+      background: #1a1a20; border: 1px solid #2a2a35; border-top: 3px solid #f5c518;
+      border-radius: 14px; padding: 32px 36px; max-width: 460px; width: 90%;
+      position: relative; animation: slideUp .25s ease;
     }
     @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
     .popup-close {
-      position: absolute;
-      top: 12px; right: 14px;
-      background: none;
-      border: none;
-      color: #888899;
-      font-size: 1.3rem;
-      cursor: pointer;
-      padding: 4px 8px;
-      border-radius: 6px;
-      transition: color .2s, background .2s;
+      position: absolute; top: 12px; right: 14px; background: none; border: none;
+      color: #888899; font-size: 1.3rem; cursor: pointer; padding: 4px 8px;
+      border-radius: 6px; transition: color .2s, background .2s;
     }
     .popup-close:hover { color: #e8e8ec; background: rgba(255,255,255,.06); }
-    .popup-title {
-      font-family: 'Rajdhani', sans-serif;
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: #e8e8ec;
-      margin-bottom: 10px;
-    }
-    .popup-text {
-      font-size: .92rem;
-      color: #bbbbc8;
-      line-height: 1.7;
-    }
-    .popup-text a {
-      color: #f5c518;
-      text-decoration: none;
-      font-weight: 600;
-    }
+    .popup-title { font-family: 'Rajdhani', sans-serif; font-size: 1.2rem; font-weight: 700; color: #e8e8ec; margin-bottom: 10px; }
+    .popup-text { font-size: .92rem; color: #bbbbc8; line-height: 1.7; }
+    .popup-text a { color: #f5c518; text-decoration: none; font-weight: 600; }
     .popup-text a:hover { text-decoration: underline; }
     .popup-dismiss {
-      display: inline-block;
-      margin-top: 18px;
-      background: #f5c518;
-      color: #0d0d0f;
-      font-family: 'Rajdhani', sans-serif;
-      font-size: .95rem;
-      font-weight: 700;
-      padding: 10px 24px;
-      border-radius: 8px;
-      border: none;
-      cursor: pointer;
-      transition: background .2s;
+      display: inline-block; margin-top: 18px; background: #f5c518; color: #0d0d0f;
+      font-family: 'Rajdhani', sans-serif; font-size: .95rem; font-weight: 700;
+      padding: 10px 24px; border-radius: 8px; border: none; cursor: pointer; transition: background .2s;
     }
     .popup-dismiss:hover { background: #e8a000; }
+    .restore-tip {
+      display: flex; align-items: flex-start; gap: 18px;
+      background: #1a1a20; border: 1px solid #2a2a35; border-left: 3px solid #f5c518;
+      border-radius: 12px; padding: 20px 24px; margin-bottom: 32px; max-width: 800px;
+    }
+    .restore-tip-icon { font-size: 1.8rem; flex-shrink: 0; margin-top: 2px; }
+    .restore-tip-content h4 {
+      font-family: 'Rajdhani', sans-serif; font-size: 1.05rem; font-weight: 700;
+      color: #e8e8ec; margin-bottom: 6px;
+    }
+    .restore-tip-content p { font-size: .88rem; color: #bbbbc8; line-height: 1.7; margin-bottom: 14px; }
+    .restore-tip-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(245,197,24,.12); color: #f5c518;
+      border: 1px solid rgba(245,197,24,.3); border-radius: 7px;
+      padding: 7px 16px; font-family: 'Rajdhani', sans-serif;
+      font-size: .88rem; font-weight: 700; text-decoration: none; transition: all .2s;
+    }
+    .restore-tip-btn:hover { background: rgba(245,197,24,.22); }
   </style>
 </head>
 <body>
@@ -118,9 +95,21 @@
     <div class="free-page">
       <h2>🎁 Free Tweaks</h2>
       <p class="subtitle">No cost, instant performance gains. On us.</p>
+
+      <!-- Restore Point Tip -->
+      <div class="restore-tip">
+        <div class="restore-tip-icon">🛡️</div>
+        <div class="restore-tip-content">
+          <h4>We recommend creating a Restore Point first</h4>
+          <p>Before applying any tweaks, create a Windows system restore point. This lets you safely roll back your PC to its current state if anything goes wrong. It only takes a minute and can save you a lot of trouble.</p>
+          <a href="guides/restore-point.html" class="restore-tip-btn">📖 How to create one →</a>
+        </div>
+      </div>
+
       <div class="free-intro">
         We also offer a selection of free tweaks in our Discord server for those who want to get a taste of what we do. While they can still provide noticeable improvements, they don't offer the same level of optimization, support, or reliability as our premium tweaks. Our paid packages are more advanced, thoroughly tested, and come with greater assurance for the best possible performance.
       </div>
+
       <div class="free-discord-cta">
         <div class="free-discord-text">
           <h3>Want access to free tweaks?</h3>
