@@ -48,11 +48,75 @@
       <h1 class="guide-detail-title">How to Create a Restore Point</h1>
 
       <div class="guide-detail-image">
-        <img src="../images/restore.png" alt="How to Create a Restore Point" onerror="if(!this.dataset.err){this.dataset.err=1;this.parentElement.innerHTML='🛡️'}">
+        <img src="../images/restore.png" alt="How to Create a Restore Point"
+             onerror="if(!this.dataset.err){this.dataset.err=1;this.parentElement.innerHTML='🛡️'}">
       </div>
 
       <div class="guide-detail-body">
-        <p>Add your guide text here. Explain step by step how to create a Windows restore point.</p>
+
+        <h2>How to Create a Restore Point in Windows 10 / 11</h2>
+        <p>
+          A restore point lets you return your computer to an earlier working state
+          if something goes wrong.
+        </p>
+
+        <h3>Step 1: Open System Protection</h3>
+        <ol>
+          <li>Press <strong>Windows key + S</strong>.</li>
+          <li>Type <strong>Create a restore point</strong>.</li>
+          <li>Click on it.</li>
+        </ol>
+
+        <h3>Step 2: Turn On Protection (If Needed)</h3>
+        <ol>
+          <li>In the <strong>System Protection</strong> tab, look under <strong>Protection Settings</strong>.</li>
+          <li>Select your <strong>system drive</strong> (usually C:).</li>
+          <li>Click <strong>Configure</strong>.</li>
+          <li>Select <strong>Turn on system protection</strong>.</li>
+          <li>Click <strong>OK</strong>.</li>
+        </ol>
+
+        <h3>Step 3: Create the Restore Point</h3>
+        <ol>
+          <li>Click <strong>Create</strong>.</li>
+          <li>Type a name (for example: <em>Before installing driver</em>).</li>
+          <li>Click <strong>Create</strong> again.</li>
+          <li>Wait until Windows confirms it was created successfully.</li>
+          <li>Click <strong>Close</strong>.</li>
+        </ol>
+
+        <p><strong>That’s it ✅</strong></p>
+
+        <h2>How to Use a Restore Point</h2>
+        <ol>
+          <li>Open <strong>Create a restore point</strong> again.</li>
+          <li>Click <strong>System Restore</strong>.</li>
+          <li>Click <strong>Next</strong>.</li>
+          <li>Select a restore point.</li>
+          <li>Click <strong>Next → Finish</strong>.</li>
+          <li>Your PC will restart and restore.</li>
+        </ol>
+
+        <h2>If It Doesn’t Work</h2>
+
+        <h3>Restore Button Is Greyed Out</h3>
+        <ul>
+          <li>Make sure <strong>System Protection</strong> is turned on (see Step 2).</li>
+        </ul>
+
+        <h3>Restore Failed</h3>
+        <ul>
+          <li>Try running System Restore in <strong>Safe Mode</strong>.</li>
+          <li>Temporarily disable your antivirus.</li>
+          <li>Make sure you have enough free disk space.</li>
+        </ul>
+
+        <h3>No Restore Points Available</h3>
+        <ul>
+          <li>System Protection may not have been enabled before.</li>
+          <li>Turn it on now to create restore points for the future.</li>
+        </ul>
+
       </div>
 
     </div>
