@@ -901,3 +901,199 @@ body {
   .detail-hero { grid-template-columns: 1fr; }
   .hero-stats { gap: 24px; flex-wrap: wrap; justify-content: center; }
 }
+
+/* ─── GUIDES ─────────────────────────────────────── */
+.guides-header {
+  padding: 48px 60px 0;
+}
+
+.guides-header h2 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.guides-header p { color: var(--muted); margin-bottom: 0; }
+
+.guides-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  padding: 36px 60px 60px;
+}
+
+.guide-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--text);
+  transition: all .25s;
+  display: flex;
+  flex-direction: column;
+}
+
+.guide-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(245,197,24,.15);
+}
+
+.guide-card-img {
+  height: 180px;
+  background: var(--bg3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.guide-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 10px;
+}
+
+.guide-card-body { padding: 20px; flex: 1; }
+
+.guide-card-tag {
+  display: inline-block;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  background: rgba(245,197,24,.12);
+  color: var(--accent);
+  border: 1px solid rgba(245,197,24,.25);
+}
+
+.guide-card-name {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.guide-card-desc { font-size: .85rem; color: var(--muted); line-height: 1.5; }
+
+/* ─── GUIDE DETAIL ───────────────────────────────── */
+.guide-detail {
+  padding: 48px 60px;
+  max-width: 860px;
+}
+
+.guide-tag-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.guide-detail-tag {
+  display: inline-block;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: rgba(245,197,24,.12);
+  color: var(--accent);
+  border: 1px solid rgba(245,197,24,.25);
+}
+
+.guide-detail-title {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 28px;
+}
+
+.guide-detail-image {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  min-height: 300px;
+}
+
+.guide-detail-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.guide-detail-body {
+  color: #bbbbc8;
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+.guide-detail-body p { margin-bottom: 16px; }
+.guide-detail-body h3 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 24px 0 8px;
+}
+
+@media (max-width: 768px) {
+  .guides-header { padding: 60px 24px 0; }
+  .guides-grid { padding: 24px; }
+  .guide-detail { padding: 60px 24px 40px; }
+}
+
+/* ─── SOCIALS ────────────────────────────────────── */
+.socials-page { padding: 48px 60px; }
+.socials-page h2 { font-family: 'Rajdhani', sans-serif; font-size: 2.2rem; font-weight: 700; margin-bottom: 8px; }
+.socials-page .subtitle { color: var(--muted); margin-bottom: 36px; }
+
+.socials-grid { display: flex; flex-direction: column; gap: 16px; max-width: 680px; }
+
+.social-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+  text-decoration: none;
+  color: var(--text);
+  transition: all .22s;
+}
+.social-card:hover { transform: translateX(4px); }
+.social-card--youtube:hover { border-color: #ff0000; box-shadow: 0 4px 24px rgba(255,0,0,.12); }
+.social-card--tiktok:hover  { border-color: #69c9d0; box-shadow: 0 4px 24px rgba(105,201,208,.12); }
+.social-card--discord:hover { border-color: #5865f2; box-shadow: 0 4px 24px rgba(88,101,242,.12); }
+
+.social-card-icon {
+  width: 56px; height: 56px; border-radius: 14px;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.social-card--youtube .social-card-icon  { background: rgba(255,0,0,.12);     color: #ff0000; }
+.social-card--tiktok  .social-card-icon  { background: rgba(105,201,208,.12); color: #69c9d0; }
+.social-card--discord .social-card-icon  { background: rgba(88,101,242,.12);  color: #5865f2; }
+
+.social-card-body { flex: 1; }
+.social-card-name { font-family: 'Rajdhani', sans-serif; font-size: 1.2rem; font-weight: 700; margin-bottom: 2px; }
+.social-card-handle { font-size: .78rem; color: var(--muted); margin-bottom: 6px; font-weight: 600; }
+.social-card-desc { font-size: .85rem; color: var(--muted); line-height: 1.5; }
+.social-card-arrow { font-size: 1.2rem; color: var(--muted); flex-shrink: 0; transition: transform .2s; }
+.social-card:hover .social-card-arrow { transform: translateX(4px); color: var(--text); }
+
+@media (max-width: 768px) { .socials-page { padding: 60px 24px 40px; } }
