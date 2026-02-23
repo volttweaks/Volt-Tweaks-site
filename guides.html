@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volt Tweaks – Guides</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <aside class="sidebar" id="sidebar">
+    <a href="index.html" class="sidebar-logo">
+      <img src="volt.png" alt="Volt Tweaks">
+      <span><em>Volt</em> Tweaks</span>
+    </a>
+    <nav>
+      <div class="nav-section">Navigation</div>
+      <a href="index.html" class="nav-link"><span class="icon">🏠</span>Home</a>
+      <a href="products.html" class="nav-link"><span class="icon">🛒</span>Products</a>
+      <a href="payment.html" class="nav-link"><span class="icon">💳</span>Payment Methods</a>
+      <a href="discord.html" class="nav-link"><span class="icon">💬</span>Discord</a>
+      <a href="free-tweaks.html" class="nav-link"><span class="icon">🎁</span>Free Tweaks</a>
+      <a href="guides.html" class="nav-link active"><span class="icon">📖</span>Guides</a>
+      <a href="socials.html" class="nav-link"><span class="icon">🌐</span>Socials</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <div class="guides-header">
+      <h2>📖 Guides</h2>
+      <p>Step-by-step guides to help you get the most out of your PC safely and confidently.</p>
+    </div>
+
+    <div class="guides-grid">
+
+      <a href="guides/restore-point.html" class="guide-card">
+        <div class="guide-card-img">
+          <img src="images/restore.png" alt="How to Create a Restore Point" onerror="if(!this.dataset.err){this.dataset.err=1;this.parentElement.innerHTML='🛡️'}">
+        </div>
+        <div class="guide-card-body">
+          <div class="guide-card-tag">Safety</div>
+          <div class="guide-card-name">How to Create a Restore Point</div>
+          <p class="guide-card-desc">Before applying any tweaks, create a system restore point so you can safely revert your PC to its previous state if needed.</p>
+        </div>
+      </a>
+
+    </div>
+  </main>
+
+  <script src="nav.js"></script>
+</body>
+</html>
