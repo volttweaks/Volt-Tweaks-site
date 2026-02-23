@@ -3,54 +3,147 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Volt Tweaks – Guides</title>
+  <title>Volt Tweaks – Home</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .popup-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.6);
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(4px);
+      animation: fadeIn .2s ease;
+    }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    .popup-box {
+      background: #1a1a20;
+      border: 1px solid #2a2a35;
+      border-top: 3px solid #f5c518;
+      border-radius: 14px;
+      padding: 32px 36px;
+      max-width: 460px;
+      width: 90%;
+      position: relative;
+      animation: slideUp .25s ease;
+    }
+    @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+    .popup-close {
+      position: absolute;
+      top: 12px; right: 14px;
+      background: none;
+      border: none;
+      color: #888899;
+      font-size: 1.3rem;
+      cursor: pointer;
+      padding: 4px 8px;
+      border-radius: 6px;
+      transition: color .2s, background .2s;
+    }
+    .popup-close:hover { color: #e8e8ec; background: rgba(255,255,255,.06); }
+    .popup-title {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #e8e8ec;
+      margin-bottom: 10px;
+    }
+    .popup-text {
+      font-size: .92rem;
+      color: #bbbbc8;
+      line-height: 1.7;
+    }
+    .popup-text a {
+      color: #f5c518;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .popup-text a:hover { text-decoration: underline; }
+    .popup-dismiss {
+      display: inline-block;
+      margin-top: 18px;
+      background: #f5c518;
+      color: #0d0d0f;
+      font-family: 'Rajdhani', sans-serif;
+      font-size: .95rem;
+      font-weight: 700;
+      padding: 10px 24px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: background .2s;
+    }
+    .popup-dismiss:hover { background: #e8a000; }
+  </style>
 </head>
 <body>
 
+  <!-- Hamburger -->
   <button class="hamburger" id="hamburger" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
-
+  <!-- Sidebar -->
   <aside class="sidebar" id="sidebar">
     <a href="index.html" class="sidebar-logo">
       <img src="volt.png" alt="Volt Tweaks">
       <span><em>Volt</em> Tweaks</span>
     </a>
     <nav>
-      <div class="nav-section">Navigation</div>
-      <a href="index.html" class="nav-link"><span class="icon">🏠</span>Home</a>
+      <a href="index.html" class="nav-link active"><span class="icon">🏠</span>Home</a>
       <a href="products.html" class="nav-link"><span class="icon">🛒</span>Products</a>
       <a href="payment.html" class="nav-link"><span class="icon">💳</span>Payment Methods</a>
       <a href="discord.html" class="nav-link"><span class="icon">💬</span>Discord</a>
       <a href="free-tweaks.html" class="nav-link"><span class="icon">🎁</span>Free Tweaks</a>
-      <a href="guides.html" class="nav-link active"><span class="icon">📖</span>Guides</a>
+      <a href="guides.html" class="nav-link"><span class="icon">📖</span>Guides</a>
       <a href="socials.html" class="nav-link"><span class="icon">🌐</span>Socials</a>
     </nav>
   </aside>
-
+  <!-- Main -->
   <main class="main">
-    <div class="guides-header">
-      <h2>📖 Guides</h2>
-      <p>Step-by-step guides to help you get the most out of your PC safely and confidently.</p>
-    </div>
-
-    <div class="guides-grid">
-
-      <a href="guides/restore-point.html" class="guide-card">
-        <div class="guide-card-img">
-          <img src="images/restore.png" alt="How to Create a Restore Point" onerror="if(!this.dataset.err){this.dataset.err=1;this.parentElement.innerHTML='🛡️'}">
+    <section class="hero">
+      <img src="volt.png" alt="Volt Tweaks Logo" class="hero-logo">
+      <p class="hero-tagline">PC Optimization &amp; Gaming Tweaks</p>
+      <h1>Welcome to <span>Volt Tweaks</span></h1>
+      <p class="hero-desc">
+        At Volt Tweaks, we provide the ultimate enhancements for your gaming PC.
+        Whether you're a competitive gamer, a content creator, or just someone who
+        wants to unlock every ounce of performance from your system — our carefully
+        crafted tweaks push your hardware to its limits. From smoother gameplay to
+        precision control and smarter resource management, Volt Tweaks has everything
+        you need to level up your PC experience.
+      </p>
+      <a href="products.html" class="btn-primary">⚡ Start exploring tweaks</a>
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-num">8+</div>
+          <div class="stat-label">Products</div>
         </div>
-        <div class="guide-card-body">
-          <div class="guide-card-tag">Safety</div>
-          <div class="guide-card-name">How to Create a Restore Point</div>
-          <p class="guide-card-desc">Before applying any tweaks, create a system restore point so you can safely revert your PC to its previous state if needed.</p>
+        <div class="stat">
+          <div class="stat-num">100%</div>
+          <div class="stat-label">Performance Focus</div>
         </div>
-      </a>
-
-    </div>
+        <div class="stat">
+          <div class="stat-num">Free</div>
+          <div class="stat-label">Starter Tweaks</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">24/7</div>
+          <div class="stat-label">Discord Support</div>
+        </div>
+      </div>
+    </section>
   </main>
-
   <script src="nav.js"></script>
+  <script>
+    const overlay = document.getElementById('popupOverlay');
+    function closePopup() { overlay.style.display = 'none'; }
+    document.getElementById('popupClose').addEventListener('click', closePopup);
+    document.getElementById('popupDismiss').addEventListener('click', closePopup);
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closePopup();
+    });
+  </script>
 </body>
 </html>
