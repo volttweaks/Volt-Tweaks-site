@@ -1,0 +1,53 @@
+════════════════════════════════════════
+  VOLT TWEAKS — REVIEW TEMPLATE
+════════════════════════════════════════
+
+HOW TO ADD A REVIEW:
+1. Open reviews.html
+2. Find the line that says:  <!-- END OF REVIEWS -->
+3. Paste a filled-in copy of the template ABOVE that line
+4. Save and push to GitHub
+
+HOW TO DELETE A REVIEW:
+- Find the block starting with  <!-- REVIEW -->
+- Delete everything from <!-- REVIEW --> down to <!-- END REVIEW -->
+- Save and push to GitHub
+
+════════════════════════════════════════
+  TEMPLATE  (copy everything below)
+════════════════════════════════════════
+
+        <!-- REVIEW -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-author">USERNAME HERE</div>
+            <div class="review-stars">★★★★★</div>
+          </div>
+          <div class="review-product">PRODUCT NAME HERE</div>
+          <div class="review-text">REVIEW TEXT HERE</div>
+        </div>
+        <!-- END REVIEW -->
+
+════════════════════════════════════════
+  STARS — copy the one you need
+════════════════════════════════════════
+
+5 stars:  ★★★★★
+4 stars:  ★★★★☆
+3 stars:  ★★★☆☆
+2 stars:  ★★☆☆☆
+1 star:   ★☆☆☆☆
+
+════════════════════════════════════════
+  PRODUCT NAMES (copy exact spelling)
+════════════════════════════════════════
+
+Full Opti
+Extreme Panel
+Pro Panel
+Basic Panel
+Trajectory Pack
+Spread Pack
+GPU Tweaks
+Lower RAM Usage
+FN Tweak
