@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volt Tweaks – Reviews</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .reviews-page { padding: 48px 60px; }
+    .reviews-page h2 { font-family: 'Rajdhani', sans-serif; font-size: 2.2rem; font-weight: 700; margin-bottom: 8px; }
+    .reviews-page .subtitle { color: var(--muted); margin-bottom: 36px; }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .review-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: var(--radius);
+      padding: 22px 24px;
+      transition: border-color .2s, transform .2s;
+    }
+    .review-card:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(245,197,24,.1); }
+
+    .review-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 6px;
+    }
+
+    .review-author {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+
+    .review-stars { color: #f5c518; font-size: 1rem; letter-spacing: 2px; }
+
+    .review-product {
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .review-text { font-size: .9rem; color: #bbbbc8; line-height: 1.7; }
+
+    @media (max-width: 768px) { .reviews-page { padding: 60px 24px 40px; } }
+  </style>
+</head>
+<body>
+
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <aside class="sidebar" id="sidebar">
+    <a href="index.html" class="sidebar-logo">
+      <img src="volt.png" alt="Volt Tweaks">
+      <span><em>Volt</em> Tweaks</span>
+    </a>
+    <nav>
+      <div class="nav-section">Navigation</div>
+      <a href="index.html" class="nav-link"><span class="icon">🏠</span>Home</a>
+      <a href="products.html" class="nav-link"><span class="icon">🛒</span>Products</a>
+      <a href="payment.html" class="nav-link"><span class="icon">💳</span>Payment Methods</a>
+      <a href="discord.html" class="nav-link"><span class="icon">💬</span>Discord</a>
+      <a href="free-tweaks.html" class="nav-link"><span class="icon">🎁</span>Free Tweaks</a>
+      <a href="guides.html" class="nav-link"><span class="icon">📖</span>Guides</a>
+      <a href="socials.html" class="nav-link"><span class="icon">🌐</span>Socials</a>
+      <a href="reviews.html" class="nav-link active"><span class="icon">⭐</span>Reviews</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <div class="reviews-page">
+
+      <h2>⭐ Reviews</h2>
+      <p class="subtitle">What our customers say about Volt Tweaks.</p>
+
+      <div class="reviews-grid">
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!--                  REVIEWS                   -->
+        <!--  Copy a block, paste it, fill in the info  -->
+        <!--  To delete: remove the block top to bottom -->
+        <!-- ═══════════════════════════════════════════ -->
+
+        <!-- REVIEW -->
+
+        <!-- END REVIEW -->
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!--              END OF REVIEWS                -->
+        <!-- ═══════════════════════════════════════════ -->
+
+      </div>
+    </div>
+  </main>
+
+  <script src="nav.js"></script>
+</body>
+</html>
