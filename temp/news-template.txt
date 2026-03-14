@@ -1,0 +1,51 @@
+╔══════════════════════════════════════════════════════════╗
+║          VOLT TWEAKS — NEWS ENTRY TEMPLATE               ║
+╚══════════════════════════════════════════════════════════╝
+
+Copy the block below and paste it inside the <div class="news-feed"> 
+in news.html, ABOVE the existing entries (newest on top).
+
+────────────────────────────────────────────────────────────
+BADGE OPTIONS  (replace the badge-new class + label as needed)
+  badge-new   → green  — "New" / "Update" / "Feature"
+  badge-fix   → blue   — "Fix" / "Patch" / "Hotfix"
+  (default)   → yellow — "Announcement" / anything else
+────────────────────────────────────────────────────────────
+
+<!-- ═══════ PASTE NEW ENTRY BELOW ═══════ -->
+<div class="news-card">
+  <div class="news-card-header">
+    <div class="news-card-title">
+      <span class="news-badge badge-new">Update</span>
+      YOUR TITLE HERE
+    </div>
+    <div class="news-meta">
+      <span class="news-date">DD Month YYYY</span>
+      <span class="news-version">v0.00</span>
+    </div>
+  </div>
+  <div class="news-card-body">
+
+    <!-- OPTIONAL IMAGE — put the file in the images/ folder and update the name below.
+         Remove this line entirely if you don't want an image. -->
+    <img src="images/YOUR-IMAGE.png" alt="Update image" class="news-image" onerror="this.style.display='none'">
+
+    <!-- CHANGE LIST — add or remove <li> items as needed -->
+    <ul class="news-changes">
+      <li>First change or detail here.</li>
+      <li>Second change or detail here.</li>
+      <li>Third change or detail here.</li>
+    </ul>
+
+  </div>
+</div>
+<!-- ═══════ END OF ENTRY ═══════ -->
+
+────────────────────────────────────────────────────────────
+QUICK TIPS
+  • Keep newest entry at the TOP of the news-feed div.
+  • Image file goes in the images/ folder.
+  • Remove the <img> line completely if there is no image.
+  • Version number format: v1.0 / v2.3.1 etc.
+  • Date format example: 14 March 2025
+────────────────────────────────────────────────────────────
